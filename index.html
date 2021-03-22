@@ -11,6 +11,25 @@
     <input name="txtUserName" type="text"/><br>
     <label for="lbPassword">Password:</label>
     <input name="txtPassword" type="password"/>
-    <button name="btnLogin">Login</button>
+    <button id="btnLogin" onclick="login()" name="btnLogin">Login</button>
 </body>
+<script>
+    function login() {
+        const userName = document.getElementsByName("txtUserName")[0].value;
+        const password = document.getElementsByName("txtPassword")[0].value;
+        if (
+            userName == "" ||
+            password == "" ||
+            userName != "admin" ||
+            password != "admin"
+        ) {
+            alert("đăng nhập thất bại");
+        } else if (userName == "admin" && password == "admin") {
+            alert("đăng nhập thành công");
+            
+        }
+    }
+</script>
 </html>
+
+
